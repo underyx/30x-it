@@ -1,0 +1,14 @@
+web:
+  build: .
+  links:
+   - redis
+  environment:
+    REDIS_URL: redis
+  volumes:
+    - .:/usr/src/app
+  ports:
+    - 8080:8080
+  command: gunicorn 30x_it.app:app --reload --bind :8080 --worker-class aiohttp.worker.GunicornWebWorker
+
+redis:
+  image: redis

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>30x it!</title>
+</head>
+<body>
+<header>
+  <h1>30x it</h1>
+  <h2>Wow such simple redirects</h2>
+</header>
+<main>
+  {% for rule in rules %}
+  <form action="/rules/{{ token }}" method="POST">
+    <input type="text" name="host" value="{{ rule.host }}">
+    <input type="text" name="target" value="{{ rule.target }}">
+    <button type="submit"></button>
+  </form>
+  {% endfor %}
+</main>
+</body>
+</html>
