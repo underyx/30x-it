@@ -9,7 +9,7 @@ setup(
     download_url='https://github.com/underyx/30x-it/releases',
     packages=['starpicker'],
     install_requires=[
-        'aiohttp<0.21',
+        'aiohttp<3.8',
         'aioredis<0.3',
         'cchardet<3',
     ],
