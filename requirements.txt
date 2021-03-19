@@ -5,11 +5,24 @@
 #    pip-compile requirements.in
 #
 aiohttp-jinja2==0.7.0
+    # via -r requirements.in
 aiohttp==0.20.2
+    # via
+    #   -r requirements.in
+    #   aiohttp-jinja2
 aioredis==0.2.4
+    # via -r requirements.in
 cchardet==1.0.0
-chardet==2.3.0            # via aiohttp
+    # via -r requirements.in
+chardet==2.3.0
+    # via aiohttp
 gunicorn==19.4.5
-hiredis==0.2.0            # via aioredis
-jinja2==2.8
-markupsafe==0.23          # via jinja2
+    # via -r requirements.in
+hiredis==0.2.0
+    # via aioredis
+jinja2==2.11.3
+    # via
+    #   -r requirements.in
+    #   aiohttp-jinja2
+markupsafe==0.23
+    # via jinja2
